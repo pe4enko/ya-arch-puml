@@ -29,7 +29,7 @@ jobs:
         run: sudo apt-get install plantuml
 
       - name: Set env
-        run: echo "RELATIVE_INCLUDE=с4" >> $GITHUB_ENV
+        run: echo "RELATIVE_INCLUDE=." >> $GITHUB_ENV
 
       - name: Test
         run: echo $RELATIVE_INCLUDE
