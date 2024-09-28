@@ -28,6 +28,9 @@ jobs:
       - name: Install PlantUML
         run: sudo apt-get install plantuml
 
+      - name: Set env
+        run: $RELATIVE_INCLUDE="c4"
+
       - name: Generate Diagrams
         run: |
           plantuml diagrams/context/*.puml
