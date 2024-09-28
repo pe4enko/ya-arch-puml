@@ -29,7 +29,7 @@ jobs:
         run: sudo apt-get install plantuml
 
       - name: Set env
-        run: $RELATIVE_INCLUDE=c4
+        run: echo "c4" >> $RELATIVE_INCLUDE
 
       - name: Generate Diagrams
         run: |
