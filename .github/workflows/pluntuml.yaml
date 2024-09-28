@@ -31,6 +31,9 @@ jobs:
       - name: Set env
         run: echo "RELATIVE_INCLUDE=с4" >> $GITHUB_ENV
 
+      - name: Test
+        run: echo $RELATIVE_INCLUDE
+
       - name: Generate Diagrams
         run: |
           plantuml diagrams/context/*.puml
