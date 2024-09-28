@@ -22,11 +22,11 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - name: Install PlantUML
-        run: sudo apt-get install plantuml
-
       - name: Install Graphviz
         run: sudo apt-get install graphviz
+
+      - name: Install PlantUML
+        run: sudo apt-get install plantuml
 
       - name: Generate Diagrams
         run: |
