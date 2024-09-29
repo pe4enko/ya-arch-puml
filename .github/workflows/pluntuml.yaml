@@ -19,20 +19,16 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
-          java-version: '17'
-          distribution: 'adopt'
-
-      - name: Install Graphviz
-        run: sudo apt-get install graphviz
+          java-version: "17"
+          distribution: "adopt"
 
       - name: Install PlantUML
-        run: sudo apt-get install plantuml
-
-      - name: Set env
-        run: echo "RELATIVE_INCLUDE=." >> $GITHUB_ENV
-
-      - name: Test
-        run: echo $RELATIVE_INCLUDE
+        run: |
+          # Prerequisites: "curl"
+          # apt-get update && apt-get install -y curl
+          # apt-get update && apt-get install -y curl
+          sudo wget https://raw.githubusercontent.com/riboseinc/plantuml-install/main/ubuntu.sh 
+          sudo bash ubuntu.sh 
 
       - name: Generate Diagrams
         run: |
